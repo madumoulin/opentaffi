@@ -1,11 +1,9 @@
 package code.google.com.opentaffi.examples;
 
-import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
-
 
 /**
  * Frame containing the PinchPanel
@@ -26,8 +24,8 @@ public class PicturePincher {
 		frame.setSize(1024, 768);
 		frame.setVisible(true);
 
-		PinchImagePanel panel = new PinchImagePanel(ImageIO.read(new File(
-				"images/ets.jpg")), 1024, 768, true, 0);
+		PinchImagePanel panel = new PinchImagePanel(ImageIO.read(this
+				.getClass().getResource("/ets.jpg")), 1024, 768, true, 0);
 
 		frame.getContentPane().add(panel);
 		panel.setSize(frame.getSize());
